@@ -3,7 +3,10 @@
 ##Project Setup
 
 - clone the project on your local
+<<<<<<< HEAD
   - git clone `https://github.com/S-a-k-s-h-i/FlightandSearchService.git`
+=======
+>>>>>>> 1d8af40755ce5963877f36c61b2af736065c3919
 - Execute `npm install` on the same as of your root directory of the downloaded project.
 - Create a `.env` file in the root directory and add the following environment variables.
   - `PORT=3000`
