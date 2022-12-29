@@ -21,11 +21,18 @@ class CityRepository {
 
   async updateCity(data, cityId) {
     try {
-      const city = await City.update(data, {
-        where: {
-          id: cityId,
-        },
-      });
+      //Below approac will work but will not return the updated data
+      //If we use Pg then returning:true can be used otherwise not
+      //   const city = await City.update(data, {
+      //     where: {
+      //       id: cityId,
+      //     },
+      //   });
+
+      //For getting the updated data in mysql
+      const city = await City.findByPk(cityId);
+      city.name = data.name;
+      await city.save();
       return city;
     } catch (error) {
       throw error;
