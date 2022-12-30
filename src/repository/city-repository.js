@@ -72,6 +72,15 @@ class CityRepository {
       throw error;
     }
   }
+
+  async createMultipleCity(data) {
+    try {
+      const cities = await City.bulkCreate(data);
+      return cities;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 module.exports = CityRepository;

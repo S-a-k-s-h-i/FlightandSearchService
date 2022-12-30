@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const { PORT } = require("./config/serverConfig");
 const ApiRoutes = require("./router/index");
 const db = require("./models/index");
+const { City } = require("./models/index");
 
 const setupAndStartSever = async () => {
   //create the express object
