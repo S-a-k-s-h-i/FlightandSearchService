@@ -33,10 +33,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      airport_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
       price: {
         allowNull: false,
         type: Sequelize.INTEGER,

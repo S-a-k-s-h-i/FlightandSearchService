@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
-      airport_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       price: {
         type: DataTypes.INTEGER,
         allowNull: false,
