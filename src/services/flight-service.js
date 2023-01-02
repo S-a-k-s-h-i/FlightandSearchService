@@ -20,22 +20,20 @@ class FlightService {
       });
       return flight;
     } catch (error) {
-      console.log("Something went wront at the repository layer");
+      console.log("Something went wront at the service layer");
       throw error;
     }
   }
-  /**
-   * flightNumber
-   * departure_airport_id
-   * arrival_airport_id
-   * airplane_id
-   * arrivalTime
-   * departureTime
-   * airport_id
-   * price
-   * boardingGate
-   * totalSeats -> airplane repo
-   */
+
+  async getAllFlights(data) {
+    try {
+      const flights = await this.flightRepository.getAllFlights(data);
+      return flights;
+    } catch (error) {
+      console.log("Something went wront at the service layer");
+      throw error;
+    }
+  }
 }
 
 module.exports = FlightService;
