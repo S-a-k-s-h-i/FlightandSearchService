@@ -1,4 +1,5 @@
 const { AirportService } = require("../services/index");
+const { SuccessCodes } = require("../utils/errorCodes");
 
 const airportService = new AirportService();
 
@@ -9,7 +10,7 @@ const airportService = new AirportService();
 const create = async (req, res) => {
   try {
     const airport = await airportService.createAirport(req.body);
-    return res.status(201).json({
+    return res.status(SuccessCodes.CREATED).json({
       data: airport,
       success: true,
       message: "Successfully created an airport",
@@ -32,7 +33,7 @@ const create = async (req, res) => {
 const get = async (req, res) => {
   try {
     const airport = await airportService.getAirport(req.params.id);
-    return res.status(200).json({
+    return res.status(SuccessCodes.OK).json({
       data: airport,
       success: true,
       message: "Successfully fetched an airport",
@@ -55,7 +56,7 @@ const get = async (req, res) => {
 const update = async (req, res) => {
   try {
     const airport = await airportService.updateAirport(req.body, req.params.id);
-    return res.status(200).json({
+    return res.status(SuccessCodes.OK).json({
       data: airport,
       success: true,
       message: "Successfully updated an airport",
@@ -78,7 +79,7 @@ const update = async (req, res) => {
 const destroy = async (req, res) => {
   try {
     const result = await airportService.deleteAirport(req.params.id);
-    return res.status(200).json({
+    return res.status(SuccessCodes.OK).json({
       data: result,
       success: true,
       message: "Successfully deleted an airport",
