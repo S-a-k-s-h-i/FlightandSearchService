@@ -48,6 +48,16 @@ class FlightRepository {
       throw error;
     }
   }
+
+  async getFlight(flightId) {
+    try {
+      const flight = await Flight.findByPk(flightId);
+      return flight;
+    } catch (error) {
+      console.log("Something went wrong at the repository layer");
+      throw error;
+    }
+  }
 }
 
 module.exports = FlightRepository;

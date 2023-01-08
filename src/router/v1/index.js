@@ -27,6 +27,7 @@ router.post(
   FlightController.create
 );
 router.get("/flights", FlightController.getAll);
+router.get("/flights/:id", FlightController.get);
 
 router.post("/airplanes", AirplaneController.create);
 
