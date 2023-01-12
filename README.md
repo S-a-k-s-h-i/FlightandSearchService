@@ -1,6 +1,14 @@
 # Welcome to Flight Service
 
-##Project Setup
+This micro-service mainly focuses on creation, deletion, updation and fetching of all the flights, airports and cities in the database.
+The APIs which read the flights from databases are exposed to the customers, others can only be accessed by the Admins.
+
+- Provides the user with the flexibility to query about the flights-
+  - User can select the number of seats,class of flight .
+  - Support filters of flights based on Price, Departure time,Duration.
+    .
+
+## Project Setup
 
 - clone the project on your local
   - git clone `https://github.com/S-a-k-s-h-i/FlightandSearchService.git`
@@ -37,9 +45,3 @@
 - A flight belongs to an aeroplane but one airplane can be used in multiple flights.
 - A city has many airports but one airport belongs to a city.
 - One airport can have many flights but one flight belongs to one airport.
-
-##Tables
-
-###City -> id,name,created_at,updated_at
-###Airport -> id,name,address,city_id,created_at,updated_at
-Relationship -> City has many airports but one airport belongs to a city (one to many)
