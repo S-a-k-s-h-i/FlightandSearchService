@@ -45,3 +45,7 @@ The APIs which read the flights from databases are exposed to the customers, oth
 - A flight belongs to an aeroplane but one airplane can be used in multiple flights.
 - A city has many airports but one airport belongs to a city.
 - One airport can have many flights but one flight belongs to one airport.
+
+![Mind Map (1)](https://user-images.githubusercontent.com/37968908/212042228-9985af3e-c6ab-41a7-b7df-b414ae51d319.jpg)
+
+
