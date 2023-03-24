@@ -5,6 +5,7 @@ const cityService = new CityService();
 
 /**
  * POST
+ * /city
  * data-> req.body
  */
 const create = async (req, res) => {
